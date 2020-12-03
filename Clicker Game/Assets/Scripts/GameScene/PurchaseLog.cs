@@ -9,5 +9,8 @@ public class PurchaseLog : MonoBehaviour
     public void StartAutoResource()
     {
         AutoResource.SetActive(true);
+        GlobalCash.CashCount -= GlobalCoalmine.coalmineValue;
+        GlobalCoalmine.coalmineValue *= 2;
+        GlobalCoalmine.turnOffButton = true;
     }
 }
