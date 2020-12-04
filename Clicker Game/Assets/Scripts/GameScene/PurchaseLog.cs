@@ -12,7 +12,7 @@ public class PurchaseLog : MonoBehaviour
         playSound.Play();
         AutoResource.SetActive(true);
         GlobalCash.CashCount -= GlobalCoalmine.coalmineValue;
-        GlobalCoalmine.coalmineValue *= 2;
+        GlobalCoalmine.coalmineValue *= 2; //mnoznik wartosci surowcow z kopalni
         GlobalCoalmine.turnOffButton = true;
         GlobalCoalmine.coalminePerSec += 1;
         GlobalCoalmine.numberOfCoalmines += 1;

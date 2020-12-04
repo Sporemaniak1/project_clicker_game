@@ -10,7 +10,7 @@ public class GlobalCoalmine : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int coalmineValue = 50;
+    public static int coalmineValue = 5; //wartosc kopalni
     public static bool turnOffButton = false;
     public GameObject coalmineStats;
     public static int numberOfCoalmines;
