@@ -10,6 +10,7 @@ public class AutoResource : MonoBehaviour
    
     void Update()
     {
+        ResourceIncrease = GlobalCoalmine.coalminePerSec;
         InternalIncrease = ResourceIncrease;
         if (CreatingResource == false)
         {
