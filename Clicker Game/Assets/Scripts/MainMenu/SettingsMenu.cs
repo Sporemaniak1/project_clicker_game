@@ -12,17 +12,17 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
-    void Start ()
+    void Start () // rozdzielczosc
     {
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
 
-        List<string> options = new List<string>();
+        List<string> options = new List<string>(); // lista rozdzielczosci
 
         int currentResolutionIndex = 0;
 
-        for (int i = 0; i < resolutions.Length; i++)
+        for (int i = 0; i < resolutions.Length; i++) // skrypt wczytujacy mozliwe rozdzielczosci poprzez unity
         {
             string option = resolutions[i].width +" x " + resolutions[i].height;
             options.Add(option);
@@ -34,28 +34,28 @@ public class SettingsMenu : MonoBehaviour
             }
         }
 
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
+        resolutionDropdown.AddOptions(options); // tworzy wybory rozdzielczosci
+        resolutionDropdown.value = currentResolutionIndex; // sczytuje mozliwe rozdzielczosci
+        resolutionDropdown.RefreshShownValue(); // czysci opcje by sie nie powtarzaly
     }
 
-    public void SetResolution (int resolutionIndex)
+    public void SetResolution (int resolutionIndex) // funkcja rozdzielczosci w programie
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
-    public void SetVolume (float volume)
+    public void SetVolume (float volume) // funkcja glosnosci dzwieku w programie
     {
         audioMixer.SetFloat("volume", volume);
     }
 
-    public void SetQuality (int qualityIndex)
+    public void SetQuality (int qualityIndex) // funkcja jakosci grafiki w programie
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 
-    public void SetFullscreen (bool isFullscreen)
+    public void SetFullscreen (bool isFullscreen) // funkcja pelnego ekranu w programie
     {
         Screen.fullScreen = isFullscreen;
     }
