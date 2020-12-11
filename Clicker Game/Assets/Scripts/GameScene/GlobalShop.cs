@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GlobalCoalmine : MonoBehaviour
+public class GlobalShop : MonoBehaviour
 {
     public GameObject fakeButton;
     public GameObject fakeText;
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int coalmineValue = 5; //wartosc kopalni, 5 podczas testów zmienić na 50 na koniec
+    public static int shopValue = 5; //wartosc sklepu, 5 podczas testów domyślnie zmienić na 50
     public static bool turnOffButton = false;
-    public GameObject coalmineStats;
-    public static int numberOfCoalmines;
-    public static int coalminePerSec;
+    public GameObject shopStats;
+    public static int numberOfShops;
+    public static int shopPerSec;
    
     void Update()
     {
         currentCash = GlobalCash.CashCount;
-        coalmineStats.GetComponent<Text>().text = "Coalmines: " + numberOfCoalmines + " @ " + coalminePerSec + " Per Second ";
-        fakeText.GetComponent<Text>().text = "Buy Coalmine - $" + coalmineValue;
-        realText.GetComponent<Text>().text = "Buy Coalmine - $" + coalmineValue;
-        if (currentCash >= coalmineValue)
+        shopStats.GetComponent<Text>().text = "Shops: " + numberOfShops + " @ " + shopPerSec + " Per Second ";
+        fakeText.GetComponent<Text>().text = "Buy Shop - $" + shopValue;
+        realText.GetComponent<Text>().text = "Buy Shop - $" + shopValue;
+        if (currentCash >= shopValue)
         {
             fakeButton.SetActive(false);
             realButton.SetActive(true);
