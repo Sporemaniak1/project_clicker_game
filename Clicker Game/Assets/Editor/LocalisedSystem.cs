@@ -4,11 +4,11 @@ using UnityEngine;
 using System.IO;
 
 [System.Serializable]
-public struct LocalisedString
+public struct LocalisedSystem
 {
     public string key;
 
-    public LocalisedString(string key)
+    public LocalisedSystem(string key)
     {
         this.key = key;
     }
@@ -21,8 +21,8 @@ public struct LocalisedString
         }
     }
 
-    public static implicit operator LocalisedString(string key)
+    public static implicit operator LocalisedSystem(string key)
     {
-        return new LocalisedString(key);
+        return new LocalisedSystem(key);
     }
 }

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System.IO;
 
 
-[CustomPropertyDrawer(typeof(LocalisedString))]
-public class LocalisedScriptDrawer : MonoBehaviour
+[CustomPropertyDrawer(typeof(LocalisedSystem))]
+public class LocalisedScriptDrawer : PropertyDrawer
 {
     bool dropdown;
     float height;
@@ -31,8 +32,8 @@ public class LocalisedScriptDrawer : MonoBehaviour
         valueRect.x += 15;
         valueRect.width -= 15;
 
-        valueRect foldButtonRect = new Rect(position);
-        foldButtonRect.width - 15;
+        Rect foldButtonRect = new Rect(position);
+        foldButtonRect.width = 15;
 
         dropdown = EditorGUI.Foldout(foldButtonRect, dropdown, "");
 
@@ -46,10 +47,10 @@ public class LocalisedScriptDrawer : MonoBehaviour
         position.width = 17;
         position.height = 17;
 
-        Texture searchicon = (Texture)Resources.Load("search");
+        Texture searchIcon = (Texture)Resources.Load("search");
         GUIContent searchContent = new GUIContent(searchIcon);
 
-        if (OnGUI.Button(position, searchContent))
+        if (GUI.Button(position, searchContent))
         {
             TextLocaliserSearchWindow.Open();
         }
@@ -57,22 +58,22 @@ public class LocalisedScriptDrawer : MonoBehaviour
         position.x += position.width + 2;
 
         Texture storeIcon = (Texture)Resources.Load("store");
-        QUIContent storeContent = new GUIContent(storeIcon);
+        GUIContent storeContent = new GUIContent(storeIcon);
 
-        if (OnGUI.Button(position, storeContent))
+        if (GUI.Button(position, storeContent))
         {
             TextLocaliserEditWindow.Open(key.stringValue);
         }
 
         if (dropdown)
         {
-            var value = LocalisationSystem.GetLocalValue(key.stringValue);
-            GUIStyle style = QUI.skin.box;
+            var value = LocalisationSystem.GetLocalisedValue(key.stringValue);
+            GUIStyle style = GUI.skin.box;
             height = style.CalcHeight(new GUIContent(value), valueRect.width);
 
             valueRect.height = height;
             valueRect.y += 21;
-            EditorFUI.LAbelField(valueRect, value, EditorStyles.wordWrappedLabel);
+            EditorGUI.LabelField(valueRect, value, EditorStyles.wordWrappedLabel);
         }
 
         EditorGUI.EndProperty();

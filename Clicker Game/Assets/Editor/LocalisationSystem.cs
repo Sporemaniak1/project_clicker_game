@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LocalisationScrypt : MonoBehaviour
+public class LocalisationSystem
 {
     public enum Language // dostepne jezyki
     {
@@ -99,7 +99,7 @@ public class LocalisationScrypt : MonoBehaviour
         UpdateDictionaries();
     }
 
-    public static void Remove(string key, string value)
+    public static void Remove(string key)
     {
         if (csvLoader == null)
         {

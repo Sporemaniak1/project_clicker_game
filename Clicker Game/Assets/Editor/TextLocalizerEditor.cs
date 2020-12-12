@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
-public class NewBehaviourScript : EditorWindow
+public class TextLocaliserEditWindow : EditorWindow
 {
     public static void Open(string key)
     {
         TextLocaliserEditWindow window = new TextLocaliserEditWindow();
-        window.titleContent = new GUIContent("Localiser Widnow");
+        window.titleContent = new GUIContent("Localiser Window");
         window.ShowUtility();
         window.key = key;
     }
@@ -18,11 +19,11 @@ public class NewBehaviourScript : EditorWindow
     public void OnGUI()
     {
         key = EditorGUILayout.TextField("Key :", key);
-        EditorGUILayout.BeginHour();
-        EditorGUILayout.LabelField("Value: ", GUILayout.MaxWidth(50));
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField("Value:", GUILayout.MaxWidth(50));
 
         EditorStyles.textArea.wordWrap = true;
-        value = EditorGUILayout.TextArea(value, EditorStyles.textArea, GUILayout.Height(100), GUILayout(400));
+        value = EditorGUILayout.TextArea(value, EditorStyles.textArea, GUILayout.Height(100), GUILayout.Width(400));
         EditorGUILayout.EndHorizontal();
 
         if (GUILayout.Button("Add"))
@@ -38,11 +39,11 @@ public class NewBehaviourScript : EditorWindow
         }
 
         minSize = new Vector2(460, 250);
-        masSize = minsize;
+        maxSize = minSize;
     }
 }
 
-public class TextLocaliserSearchWindow : EditorWidnow
+public class TextLocaliserSearchWindow : EditorWindow
 {
     public static void Open()
     {
@@ -50,7 +51,7 @@ public class TextLocaliserSearchWindow : EditorWidnow
         window.titleContent = new GUIContent("Localisation Search");
 
         Vector2 mouse = GUIUtility.GUIToScreenPoint(Event.current.mousePosition);
-        Rect r = new Rect(mouse.x - 450, mouse.y + 1 = 10, 10);
+        Rect r = new Rect(mouse.x - 450, mouse.y + 10, 10, 10);
         window.ShowAsDropDown(r, new Vector2(500, 300));
     }
 
@@ -65,12 +66,12 @@ public class TextLocaliserSearchWindow : EditorWidnow
 
     public void OnGUI()
     {
-        EditorLayout.BeginHorizontal("Box");
-        EditorLayout.LabelField("Search: ", EditorStyles.boldLabel);
+        EditorGUILayout.BeginHorizontal("Box");
+        EditorGUILayout.LabelField("Search: ", EditorStyles.boldLabel);
         value = EditorGUILayout.TextField(value);
-        EditorGUILaout.EndHorizontal();
+        EditorGUILayout.EndHorizontal();
 
-        GetSearchResult();
+        GetSearchResults();
     }
 
     private void GetSearchResults()
@@ -79,18 +80,18 @@ public class TextLocaliserSearchWindow : EditorWidnow
 
         EditorGUILayout.BeginVertical();
         scroll = EditorGUILayout.BeginScrollView(scroll);
-        foreach(KeyValuePair<string, string> elemnt in dictionary)
+        foreach(KeyValuePair<string, string> element in dictionary)
         {
-            if(element.Key.ToLower().Contains(value.ToLower()) || element.value.ToLower().Contains(value.ToLower))
+            if (element.Key.ToLower().Contains(value.ToLower()) || element.Value.ToLower().Contains(value.ToLower()))
             {
                 EditorGUILayout.BeginHorizontal("box");
                 Texture closeIcon = (Texture)Resources.Load("close");
 
                 GUIContent content = new GUIContent(closeIcon);
 
-                if (GUILayout.Button(content, GUILayout, MaxWidth(20), GUILayout.MaxHeight(20)))
+                if (GUILayout.Button(content, GUILayout.MaxWidth(20), GUILayout.MaxHeight(20)))
                 {
-                    if (EdiotrUtility.DisplayDialog("Remove Key " + element.key + "?", "This will remove the element from localisation, are you sure?", "Do it")) ;
+                    if (EditorUtility.DisplayDialog("Remove Key" + element.Key + "?", "This will remove the element from localisation, are you sure?", "Do it"))
                     {
                         LocalisationSystem.Remove(element.Key);
                         AssetDatabase.Refresh();
@@ -100,7 +101,7 @@ public class TextLocaliserSearchWindow : EditorWidnow
                 }
 
                 EditorGUILayout.TextField(element.Key);
-                EditorGUILayout.LabelField(element.value);
+                EditorGUILayout.LabelField(element.Value);
                 EditorGUILayout.EndHorizontal();
             }
         }

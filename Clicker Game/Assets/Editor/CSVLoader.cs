@@ -81,14 +81,14 @@ public class CSVLoader : MonoBehaviour
 
         for (int i=0; i < lines.Length; i++)
         {
-            string line = lines[1];
+            string line = lines[i];
 
             keys[i] = line.Split(fieldSeperator, System.StringSplitOptions.None)[0];
         }
 
         int index = -1;
 
-        for (int i=0; i<keys.Length; i++)
+        for (int i=0; i < keys.Length; i++)
         {
             if (keys[i].Contains(key))
             {

@@ -9,12 +9,14 @@ public class TextLocaliserUI : MonoBehaviour
 {
     TextMeshProUGUI textField;
 
-    public LocalisedString localisedString;
+    public string key;
+
+    public LocalisedSystem localisedString;
 
     void Start()
     {
         textField = GetComponent<TextMeshProUGUI>();
-
+        string value = LocalisationSystem.GetLocalisedValue(key);
         textField.text = localisedString.value;
     }
 }
