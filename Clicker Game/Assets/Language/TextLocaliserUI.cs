@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
-
 public class TextLocaliserUI : MonoBehaviour
 {
     TextMeshProUGUI textField;
@@ -17,6 +16,6 @@ public class TextLocaliserUI : MonoBehaviour
     {
         textField = GetComponent<TextMeshProUGUI>();
         string value = LocalisationSystem.GetLocalisedValue(key);
-        textField.text = localisedString.value;
+        textField.text = value;
     }
 }

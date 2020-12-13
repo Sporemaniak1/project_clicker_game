@@ -1068,6 +1068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: play
+  localisedString:
+    key: 
 --- !u!1 &412820094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,6 +1561,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: volume
+  localisedString:
+    key: 
 --- !u!1 &504771870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2692,6 +2696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: settings
+  localisedString:
+    key: 
 --- !u!1 &915134984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4418,6 +4424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: quality
+  localisedString:
+    key: 
 --- !u!1 &1475029615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4869,6 +4877,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: quit
+  localisedString:
+    key: 
 --- !u!1 &1664742068
 GameObject:
   m_ObjectHideFlags: 0
@@ -5040,6 +5050,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: back
+  localisedString:
+    key: 
 --- !u!1 &1714851859
 GameObject:
   m_ObjectHideFlags: 0
@@ -5327,6 +5339,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: settings
+  localisedString:
+    key: 
 --- !u!1 &1744151384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,6 +5512,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: resolution
+  localisedString:
+    key: 
 --- !u!1 &1815992593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5683,6 +5699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: fullscreen
+  localisedString:
+    key: 
 --- !u!114 &1848628214
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LocalisationSystem
+public class LocalisationSystem : MonoBehaviour
 {
     public enum Language // dostepne jezyki
     {

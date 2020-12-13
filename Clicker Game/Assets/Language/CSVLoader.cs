@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Linq;
 
-public class CSVLoader : MonoBehaviour
+public class CSVLoader
 {
     private TextAsset csvFile; // referencja do pliku
     private char lineSeperator = '\n'; // seperator linii
@@ -47,7 +47,8 @@ public class CSVLoader : MonoBehaviour
             for (int f=0; f<fields.Length; f++)
             {
                 fields[f] = fields[f].TrimStart(' ', surround);
-                fields[f] = fields[f].TrimEnd(surround);
+                fields[f] = fields[f].Replace("\"", "");
+                fields[f] = fields[f].Replace(surround.ToString(), "");
             }
 
             if(fields.Length > attributeIndex)
