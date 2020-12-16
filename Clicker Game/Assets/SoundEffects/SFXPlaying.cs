@@ -7,6 +7,8 @@ public class SFXPlaying : MonoBehaviour
     
     public AudioSource MineButton;
     public AudioSource SellButton;
+    public AudioSource ConstructionBuildingSiteSound;
+    public AudioSource PauseMenuSounds;
 
 
     public void PlayMineButton()
@@ -18,4 +20,15 @@ public class SFXPlaying : MonoBehaviour
     {
         SellButton.Play();
     }
+
+    public void PlayConstructionBuildingSiteSound()
+    {
+        ConstructionBuildingSiteSound.Play();
+    }
+
+    public void PlayPauseMenuSounds()
+    {
+        PauseMenuSounds.Play();
+    }
+
 }
