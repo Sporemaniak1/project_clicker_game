@@ -1,13 +1,12 @@
-"key","en","pl",
-"play","PLAY","GRAJ",
-"settings","SETTINGS","USTAWIENIA",
-"quit","QUIT","WYJŚCIE",
-"volume","VOLUME","DŹWIĘK",
-"resolution","RESOLUTION","ROZDZIELCZOŚĆ",
-"quality","QUALITY","JAKOŚĆ",
-"fullscreen","FULLSCREEN","PEŁNY EKRAN",
-"back","BACK","WRÓC",
-"pause","PAUSE","PAUZA",
-"menu","MENU","MENU",
-"buy_coal","BUY COALMINE","KUP KOPALNIĘ WĘGLA",
-"greeting","Greeting traveler!",""
+"key","en","pl"
+"play","PLAY","GRAJ"
+"settings","SETTINGS","USTAWIENIA"
+"quit","QUIT","WYJŚCIE"
+"volume","VOLUME","DŹWIĘK"
+"resolution","RESOLUTION","ROZDZIELCZOŚĆ"
+"quality","QUALITY","JAKOŚĆ"
+"fullscreen","FULLSCREEN","PEŁNY EKRAN"
+"back","BACK","WRÓC"
+"pause","PAUSE","PAUZA"
+"menu","MENU","MENU"
+"buy_coal","BUY COALMINE","KUP KOPALNIĘ WĘGLA"
