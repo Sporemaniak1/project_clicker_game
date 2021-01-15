@@ -7,6 +7,7 @@ public class PurchaseLog : MonoBehaviour
     public GameObject AutoResource;
     public GameObject AutoSell;
     public AudioSource playSound;
+    public GameObject AutoResource2;
 
     public void StartAutoResource()
     {
@@ -27,5 +28,15 @@ public class PurchaseLog : MonoBehaviour
         GlobalShop.turnOffButton = true;
         GlobalShop.shopPerSec += 1;
         GlobalShop.numberOfShops += 1;
+    }
+    public void StartAutoResource2()
+    {
+        playSound.Play();
+        AutoResource2.SetActive(true);
+        GlobalCash.CashCount -= GlobalGoldmine.goldmineValue;
+        GlobalGoldmine.goldmineValue *= 2;
+        GlobalGoldmine.turnOffButton = true;
+        GlobalGoldmine.goldminePerSec += 5;
+        GlobalGoldmine.numberOfGoldmines += 1;
     }
 }
