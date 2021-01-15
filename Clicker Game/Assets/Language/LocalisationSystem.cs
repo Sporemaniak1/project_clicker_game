@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,7 +9,27 @@ public class LocalisationSystem : MonoBehaviour
     public enum Language // dostepne jezyki
     {
         English,
-        Polish
+        Polski
+    }
+
+    public Dropdown LangList;
+    public Text SelectedLanguage;
+
+    public void DropdownIndexChanges(int index)
+    {
+        // SelectedLanguage.text = names[index];
+    }
+
+    void Start()
+    {
+        SetLanguage();
+    }
+
+    void SetLanguage()
+    {
+        string[] enumNames = Enum.GetNames(typeof(Language));
+        List<string> names = new List<string>(enumNames);
+        LangList.AddOptions(names);
     }
 
     public static Language language = Language.English; // domyslny jezyk
@@ -54,7 +75,7 @@ public class LocalisationSystem : MonoBehaviour
                 localisedEN.TryGetValue(key, out value);
                 break;
 
-            case Language.Polish:
+            case Language.Polski:
                 localisedPL.TryGetValue(key, out value);
                 break;
         }
