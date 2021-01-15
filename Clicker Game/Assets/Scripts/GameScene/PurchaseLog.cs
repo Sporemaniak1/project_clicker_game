@@ -10,6 +10,7 @@ public class PurchaseLog : MonoBehaviour
     public GameObject AutoResource2;
     public GameObject AutoResource3;
     public GameObject AutoResource4;
+    public GameObject AutoResource5;
 
     public void StartAutoResource()
     {
@@ -60,5 +61,15 @@ public class PurchaseLog : MonoBehaviour
         GlobalEmeraldmine.turnOffButton = true;
         GlobalEmeraldmine.emeraldminePerSec += 30;
         GlobalEmeraldmine.numberOfEmeraldmines += 1;
+    }
+    public void StartAutoResource5()
+    {
+        playSound.Play();
+        AutoResource5.SetActive(true);
+        GlobalCash.CashCount -= GlobalDiamondmine.diamondmineValue;
+        GlobalDiamondmine.diamondmineValue *= 2;
+        GlobalDiamondmine.turnOffButton = true;
+        GlobalDiamondmine.diamondminePerSec += 50;
+        GlobalDiamondmine.numberOfDiamondmines += 1;
     }
 }
