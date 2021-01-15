@@ -9,6 +9,7 @@ public class PurchaseLog : MonoBehaviour
     public AudioSource playSound;
     public GameObject AutoResource2;
     public GameObject AutoResource3;
+    public GameObject AutoResource4;
 
     public void StartAutoResource()
     {
@@ -49,5 +50,15 @@ public class PurchaseLog : MonoBehaviour
         GlobalIronmine.turnOffButton = true;
         GlobalIronmine.ironminePerSec += 20;
         GlobalIronmine.numberOfIronmines += 1;
+    }
+    public void StartAutoResource4()
+    {
+        playSound.Play();
+        AutoResource4.SetActive(true);
+        GlobalCash.CashCount -= GlobalEmeraldmine.emeraldmineValue;
+        GlobalEmeraldmine.emeraldmineValue *= 2;
+        GlobalEmeraldmine.turnOffButton = true;
+        GlobalEmeraldmine.emeraldminePerSec += 30;
+        GlobalEmeraldmine.numberOfEmeraldmines += 1;
     }
 }
