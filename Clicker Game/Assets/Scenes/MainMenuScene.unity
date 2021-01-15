@@ -5293,7 +5293,7 @@ GameObject:
   - component: {fileID: 1511173072}
   - component: {fileID: 1511173071}
   m_Layer: 5
-  m_Name: DropdownRes (1)
+  m_Name: DropdownLang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6436,7 +6436,6 @@ GameObject:
   - component: {fileID: 1815992594}
   - component: {fileID: 1815992595}
   - component: {fileID: 1815992597}
-  - component: {fileID: 1815992596}
   m_Layer: 5
   m_Name: SettingsMenu
   m_TagString: Untagged
@@ -6488,20 +6487,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 3c329c8e9ea6c744b91dd0b64f830374, type: 2}
   resolutionDropdown: {fileID: 439942398}
---- !u!114 &1815992596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815992593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba587c47ec73447449bb2d9059846ff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LangList: {fileID: 1511173071}
-  SelectedLanguage: {fileID: 0}
 --- !u!114 &1815992597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6514,6 +6499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e09ad7992e1dcc48b4790152740654e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LangList: {fileID: 1511173071}
+  SelectedLanguage: {fileID: 0}
 --- !u!1 &1843461667
 GameObject:
   m_ObjectHideFlags: 0
