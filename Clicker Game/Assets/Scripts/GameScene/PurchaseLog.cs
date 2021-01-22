@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PurchaseLog : MonoBehaviour
 {
-    public GameObject AutoResource;
     public GameObject AutoSell;
+    public GameObject AutoSell1;
     public AudioSource playSound;
+    public GameObject AutoResource;
     public GameObject AutoResource2;
     public GameObject AutoResource3;
     public GameObject AutoResource4;
@@ -32,6 +33,16 @@ public class PurchaseLog : MonoBehaviour
         GlobalShop.turnOffButton = true;
         GlobalShop.shopPerSec += 1;
         GlobalShop.numberOfShops += 1;
+    }
+    public void StartAutoSell1()
+    {
+        playSound.Play();
+        AutoSell1.SetActive(true);
+        GlobalCash.CashCount -= GlobalMarket.marketValue;
+        GlobalMarket.marketValue *= 2; //mnoznik wartosci surowcow z kopalni
+        GlobalMarket.turnOffButton = true;
+        GlobalMarket.marketPerSec += 30;
+        GlobalMarket.numberOfMarkets += 1;
     }
     public void StartAutoResource2()
     {
