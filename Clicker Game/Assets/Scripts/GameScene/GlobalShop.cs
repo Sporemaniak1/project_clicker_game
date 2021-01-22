@@ -27,6 +27,10 @@ public class GlobalShop : MonoBehaviour
             fakeButton.SetActive(false);
             realButton.SetActive(true);
         }
+        else
+        {
+            turnOffButton = true;
+        }
 
         if (turnOffButton == true)
         {
@@ -34,5 +38,6 @@ public class GlobalShop : MonoBehaviour
             fakeButton.SetActive(true);
             turnOffButton = false;
         }
+
     }
 }

@@ -21,10 +21,14 @@ public class AutoSell : MonoBehaviour
 
     IEnumerator SellTheResource ()
     {
-        if(GlobalResources.ResourceCount == 0)
+        if (GlobalResources.ResourceCount <= (-1 + InternalIncrease)) 
         {
-            //nie możemy nic zrobić
+            SellingResource = false; 
+
         }
+        
+            
+        
         else
         {
             GlobalCash.CashCount += InternalIncrease;

@@ -27,6 +27,10 @@ public class GlobalGoldmine : MonoBehaviour
             fakeButton.SetActive(false);
             realButton.SetActive(true);
         }
+        else
+        {
+            turnOffButton = true;
+        }
 
         if (turnOffButton == true)
         {
