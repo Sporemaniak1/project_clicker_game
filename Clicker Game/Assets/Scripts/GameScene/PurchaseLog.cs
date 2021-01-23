@@ -7,6 +7,7 @@ public class PurchaseLog : MonoBehaviour
     public GameObject AutoSell;
     public GameObject AutoSell1;
     public GameObject AutoSell2;
+    public GameObject AutoSell3;
     public AudioSource playSound;
     public GameObject AutoResource;
     public GameObject AutoResource2;
@@ -55,7 +56,17 @@ public class PurchaseLog : MonoBehaviour
         GlobalSupermarket.supermarketPerSec += 70;
         GlobalSupermarket.numberOfSupermarkets += 1;
     }
-        public void StartAutoResource2()
+    public void StartAutoSell3()
+    {
+        playSound.Play();
+        AutoSell3.SetActive(true);
+        GlobalCash.CashCount -= GlobalHypermarket.hypermarketValue;
+        GlobalHypermarket.hypermarketValue *= 2; //mnoznik wartosci surowcow z kopalni
+        GlobalHypermarket.turnOffButton = true;
+        GlobalHypermarket.hypermarketPerSec += 150;
+        GlobalHypermarket.numberOfHypermarkets += 1;
+    }
+    public void StartAutoResource2()
     {
         playSound.Play();
         AutoResource2.SetActive(true);

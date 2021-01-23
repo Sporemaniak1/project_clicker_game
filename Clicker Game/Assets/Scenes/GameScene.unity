@@ -3267,6 +3267,7 @@ Transform:
   - {fileID: 1968916801}
   - {fileID: 1331922465}
   - {fileID: 366713018}
+  - {fileID: 812001653}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6860,6 +6861,7 @@ MonoBehaviour:
   AutoSell: {fileID: 642048437}
   AutoSell1: {fileID: 1331922464}
   AutoSell2: {fileID: 366713017}
+  AutoSell3: {fileID: 812001652}
   playSound: {fileID: 428029036}
   AutoResource: {fileID: 743657551}
   AutoResource2: {fileID: 542256855}
@@ -7289,6 +7291,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807350991}
   m_CullTransparentMesh: 0
+--- !u!1 &812001652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 812001653}
+  - component: {fileID: 812001657}
+  - component: {fileID: 812001656}
+  - component: {fileID: 812001655}
+  - component: {fileID: 812001654}
+  m_Layer: 0
+  m_Name: AutoSellResource3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &812001653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812001652}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -91.24521, y: -207.73233, z: -50252.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 338989021}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &812001654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812001652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6791509bdaee4342adce5e4cae6cc46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selling3Resource: 0
+  InternalIncrease: 0
+--- !u!114 &812001655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812001652}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40adaf6bf00956445b7cb6603b3047be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selling2Resource: 0
+  InternalIncrease: 0
+--- !u!114 &812001656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812001652}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b95d6a7b92c66d428a526b00b72060e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selling1Resource: 0
+  InternalIncrease: 0
+--- !u!114 &812001657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812001652}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8954e4084171dea489760a8e821efb1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SellingResource: 0
+  InternalIncrease: 0
 --- !u!1 &818109292
 GameObject:
   m_ObjectHideFlags: 0
@@ -8470,6 +8562,7 @@ GameObject:
   - component: {fileID: 952598845}
   - component: {fileID: 952598846}
   - component: {fileID: 952598847}
+  - component: {fileID: 952598848}
   m_Layer: 0
   m_Name: MechanicsObject
   m_TagString: Untagged
@@ -8681,6 +8774,24 @@ MonoBehaviour:
   realText: {fileID: 1880218474}
   currentCash: 0
   supermarketStats: {fileID: 48503461}
+--- !u!114 &952598848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952598835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c1600056db6ad48a0d1703e210eea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fakeButton: {fileID: 634579352}
+  fakeText: {fileID: 2068197852}
+  realButton: {fileID: 1376057681}
+  realText: {fileID: 656254821}
+  currentCash: 0
+  hypermarketStats: {fileID: 1946004075}
 --- !u!1 &968914845
 GameObject:
   m_ObjectHideFlags: 0
@@ -10882,7 +10993,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 754181908}
-        m_MethodName: StartAutoSell
+        m_MethodName: StartAutoSell3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15015,7 +15126,7 @@ GameObject:
   - component: {fileID: 1946004078}
   - component: {fileID: 1946004077}
   m_Layer: 5
-  m_Name: ShopDisplay
+  m_Name: HyperDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15874,8 +15985,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -16.699997, y: 0}
-  m_SizeDelta: {x: 33.34659, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2068197854
 MonoBehaviour:
