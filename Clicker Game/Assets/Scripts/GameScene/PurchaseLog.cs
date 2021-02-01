@@ -15,6 +15,7 @@ public class PurchaseLog : MonoBehaviour
     public GameObject AutoResource4;
     public GameObject AutoResource5;
     public GameObject AutoResource6;
+    public GameObject AutoResource7;
 
     public void StartAutoResource()
     {
@@ -115,5 +116,15 @@ public class PurchaseLog : MonoBehaviour
         GlobalNickelmine.turnOffButton = true;
         GlobalNickelmine.nickelminePerSec += 80;
         GlobalNickelmine.numberOfNickelmines += 1;
+    }
+    public void StartAutoResource7()
+    {
+        playSound.Play();
+        AutoResource7.SetActive(true);
+        GlobalCash.CashCount -= GlobalSasiniummine.SasiniummineValue;
+        GlobalSasiniummine.SasiniummineValue *= 1;
+        GlobalSasiniummine.turnOffButton = true;
+        GlobalSasiniummine.sasiniumminePerSec -= 1;
+        GlobalSasiniummine.numberOfSasiniummines += 1;
     }
 }
