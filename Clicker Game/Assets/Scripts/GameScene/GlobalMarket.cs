@@ -10,7 +10,7 @@ public class GlobalMarket : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int marketValue = 10; //wartosc sklepu, 10 podczas testów domyślnie zmienić na 1000
+    public static int marketValue = 1000; //wartosc sklepu, 10 podczas testów domyślnie zmienić na 1000
     public static bool turnOffButton = false;
     public GameObject marketStats;
     public static int numberOfMarkets;

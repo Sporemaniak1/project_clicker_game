@@ -10,7 +10,7 @@ public class GlobalEmeraldmine : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int emeraldmineValue = 500; //wartosc kopalni, 500 podczas testów zmienić na 5000 na koniec
+    public static int emeraldmineValue = 5000; //wartosc kopalni, 500 podczas testów zmienić na 5000 na koniec
     public static bool turnOffButton = false;
     public GameObject emeraldmineStats;
     public static int numberOfEmeraldmines;

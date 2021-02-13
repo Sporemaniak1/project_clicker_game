@@ -10,7 +10,7 @@ public class GlobalShop : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int shopValue = 5; //wartosc sklepu, 5 podczas testów domyślnie zmienić na 50
+    public static int shopValue = 50; //wartosc sklepu, 5 podczas testów domyślnie zmienić na 50
     public static bool turnOffButton = false;
     public GameObject shopStats;
     public static int numberOfShops;

@@ -10,7 +10,7 @@ public class GlobalHypermarket : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int hypermarketValue = 10; //wartosc sklepu, 10 podczas testów domyślnie zmienić na 100000
+    public static int hypermarketValue = 100000; //wartosc sklepu, 10 podczas testów domyślnie zmienić na 100000
     public static bool turnOffButton = false;
     public GameObject hypermarketStats;
     public static int numberOfHypermarkets;

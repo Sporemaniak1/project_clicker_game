@@ -10,7 +10,7 @@ public class GlobalSasiniummine : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int SasiniummineValue = 70; //wartosc kopalni, 70 podczas testów zmienić na 70000000 na koniec
+    public static int SasiniummineValue = 70000000; //wartosc kopalni, 70 podczas testów zmienić na 70000000 na koniec
     public static bool turnOffButton = false;
     public GameObject sasiniummineStats;
     public static int numberOfSasiniummines;

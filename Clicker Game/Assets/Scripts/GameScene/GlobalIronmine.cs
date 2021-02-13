@@ -10,7 +10,7 @@ public class GlobalIronmine : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int ironmineValue = 200; //wartosc kopalni, 200 podczas testów zmienić na 2000 na koniec
+    public static int ironmineValue = 2000; //wartosc kopalni, 200 podczas testów zmienić na 2000 na koniec
     public static bool turnOffButton = false;
     public GameObject ironmineStats;
     public static int numberOfIronmines;

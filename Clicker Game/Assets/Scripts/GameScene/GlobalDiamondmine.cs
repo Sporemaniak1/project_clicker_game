@@ -10,7 +10,7 @@ public class GlobalDiamondmine : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int diamondmineValue = 10; //wartosc kopalni, 1000 podczas testów zmienić na 10000 na koniec
+    public static int diamondmineValue = 10000; //wartosc kopalni, 1000 podczas testów zmienić na 10000 na koniec
     public static bool turnOffButton = false;
     public GameObject diamondmineStats;
     public static int numberOfDiamondmines;

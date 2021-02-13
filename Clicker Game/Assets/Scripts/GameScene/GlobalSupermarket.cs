@@ -10,7 +10,7 @@ public class GlobalSupermarket : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int supermarketValue = 10; //wartosc sklepu, 10 podczas testów domyślnie zmienić na 10000
+    public static int supermarketValue = 10000; //wartosc sklepu, 10 podczas testów domyślnie zmienić na 10000
     public static bool turnOffButton = false;
     public GameObject supermarketStats;
     public static int numberOfSupermarkets;

@@ -10,7 +10,7 @@ public class GlobalGoldmine : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int goldmineValue = 50; //wartosc kopalni, 50 podczas testów zmienić na 500 na koniec
+    public static int goldmineValue = 500; //wartosc kopalni, 50 podczas testów zmienić na 500 na koniec
     public static bool turnOffButton = false;
     public GameObject goldmineStats;
     public static int numberOfGoldmines;

@@ -10,7 +10,7 @@ public class GlobalNickelmine : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCash;
-    public static int nickelmineValue = 20; //wartosc kopalni, 20 podczas testów zmienić na 20000 na koniec
+    public static int nickelmineValue = 20000; //wartosc kopalni, 20 podczas testów zmienić na 20000 na koniec
     public static bool turnOffButton = false;
     public GameObject nickelmineStats;
     public static int numberOfNickelmines;
