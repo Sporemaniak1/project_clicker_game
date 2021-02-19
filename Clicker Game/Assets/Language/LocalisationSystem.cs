@@ -32,7 +32,7 @@ public class LocalisationSystem : MonoBehaviour
         LangList.AddOptions(names);
     }
 
-    public static Language language = Language.English; // domyslny jezyk
+    public static Language language = Language.Polski; // domyslny jezyk
 
     private static Dictionary<string, string> localisedEN;
     private static Dictionary<string, string> localisedPL;
